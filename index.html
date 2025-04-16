@@ -10,10 +10,11 @@
     <h2>eventos Javascript</h2>
     <p id="texto"></p><br>
     <button ondblclick="eventoDblClick()">Clique aqui</button><br><br>
-    <div style = "margin:auto auto;width:80%; height: 200px; background-color: blue"></div> 
-    
+    <div id="teste" onmouseout="viraAzul()" onmouseover="viraVermelho()"
+        style = "margin:auto auto;width:80%; height: 200px; background-color: blue">
+    </div> 
  
-    input id="campoTexto" style="padding:80px; font-size:40px;" type="texo" pleaceholder="digite alguma coisa">
+    <input onfocus="limpatexto()" id="campoTexto" style="padding:80px; font-size:40px;" type="texo" pleaceholder="digite alguma coisa">
     
     <script src="js/index.js"></script>
 

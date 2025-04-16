@@ -13,7 +13,7 @@ function viraAzul(){
     div.style.backgroundColor = "blue";
 }
 
-function adicionaTexto(){
-    let p = document.getElementById("texto");
-    p.append('o mouse moveu<br>');
+function limpatexto(){
+    document.getElementById("campotexto").value = "";
+    
 }
