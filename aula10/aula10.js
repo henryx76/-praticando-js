@@ -1,19 +1,20 @@
-function eventoClick(){
-    //alert('clicou!');
-}
-
-
-function viraVermelho(){
-    let div = document.getElementById("teste");
+function viraVermelho() {
+    const div = document.getElementById("teste");
     div.style.backgroundColor = "red";
-}
-
-function viraAzul(){
-    let div = document.getElementById("teste");
+  }
+  
+  function viraAzul() {
+    const div = document.getElementById("teste");
     div.style.backgroundColor = "blue";
-}
-
-function limpatexto(){
-    document.getElementById("campotexto").value = "";
-    
-}
+  }
+  
+  function eventDblClick() {
+    const texto = document.getElementById("texto");
+    texto.innerText = "Você clicou duas vezes!";
+  }
+  
+  function limpaTexto() {
+    const input = document.getElementById("campoTexto");
+    input.value = "";
+  }
+  
