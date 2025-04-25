@@ -1,88 +1,77 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #eeeeee;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background-color: white;
     padding: 20px;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  h1 {
+    border-radius: 10px;
     text-align: center;
-  }
-  
-  .input-area {
+}
+
+.input-container {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
+    margin-top: 20px;
+}
+
+#taskInput {
     flex: 1;
-    padding: 15px;
+    padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .add-btn {
-    background-color: #4CAF50;
+}
+
+#addTaskBtn {
+    background-color: green;
     color: white;
     border: none;
-    padding: 15px 20px;
+    padding: 10px 20px;
     font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .task-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .task {
+}
+
+#addTaskBtn:hover {
+    background-color: darkgreen;
+}
+
+.task {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 10px;
     border-radius: 5px;
-    background: #f9f9f9;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
-  
-  .task-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .task-info i {
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .mdi-check-circle {
-    color: green;
-  }
-  
-  .mdi-circle-outline {
-    color: black;
-  }
-  
-  .delete-btn {
+}
+
+.task.completed {
+    background-color: #c8f7c5;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task .text {
+    flex: 1;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.task button {
     background-color: red;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 5px 10px;
     cursor: pointer;
-  }
-  
+}
+
+.task button:hover {
+    background-color: darkred;
+}

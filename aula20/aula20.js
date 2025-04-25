@@ -1,40 +1,41 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const addTaskBtn = document.getElementById('addTaskBtn');
+  addTaskBtn.addEventListener('click', addTask);
+});
+
 function addTask() {
   const taskInput = document.getElementById("taskInput");
-  const taskText = taskInput.value.trim();
-
-  if (taskText === "") {
-    alert("Digite uma tarefa!");
-    return;
-  }
-
   const taskList = document.getElementById("taskList");
+
+  if (taskInput.value.trim() === "") {
+      alert("Por favor, insira uma tarefa.");
+      return;
+  }
 
   const taskDiv = document.createElement("div");
   taskDiv.className = "task";
 
-  const taskInfo = document.createElement("div");
-  taskInfo.className = "task-info";
+  const check = document.createElement("input");
+  check.type = "checkbox";
+  check.addEventListener("change", () => {
+      taskDiv.classList.toggle("completed", check.checked);
+  });
 
-  const icon = document.createElement("i");
-  icon.className = "mdi mdi-circle-outline";
-  icon.onclick = () => {
-    icon.classList.toggle("mdi-check-circle");
-    icon.classList.toggle("mdi-circle-outline");
-  };
-
-  const taskTextSpan = document.createElement("span");
-  taskTextSpan.textContent = taskText;
+  const taskText = document.createElement("span");
+  taskText.className = "text";
+  taskText.textContent = taskInput.value;
 
   const deleteBtn = document.createElement("button");
-  deleteBtn.className = "delete-btn";
   deleteBtn.textContent = "Deletar";
-  deleteBtn.onclick = () => taskList.removeChild(taskDiv);
+  deleteBtn.addEventListener("click", () => {
+      taskList.removeChild(taskDiv);
+  });
 
-  taskInfo.appendChild(icon);
-  taskInfo.appendChild(taskTextSpan);
-  taskDiv.appendChild(taskInfo);
+  taskDiv.appendChild(check);
+  taskDiv.appendChild(taskText);
   taskDiv.appendChild(deleteBtn);
 
   taskList.appendChild(taskDiv);
+
   taskInput.value = "";
 }
