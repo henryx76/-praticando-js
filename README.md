@@ -1,31 +1,48 @@
 # -Praticando-js
-Minha jornada com java-script mas que ainda pode melhorar
+Minha jornada com java-script 
+## algumas funcionalidades que eu aprendi durante o curso de javaScript:
+
+Os eventos: essa funcionalidade Reage a ações do usuário como cliques, digitação, movimento do mouse
+
+Variáveis e Tipagem Dinâmica: "let", "const" e "var" são algumas tipagens dinamicas que permitem declarar variáveis com tipos dinâmicos "string, number, boolean"
+
+aqui em baixo está um exemplo de função de soma
+const soma = (a, b) => a + b;
 
 
-## caso queria acessar meu projeto disponibilizarei ele aqui
-
-Clone o repositorio
-
- git clone https://github.com/henryx76/practicing-js.git
-
-instale as dependecias:
  
- 
- ## Uso de codigos em javaScript
-Para rodar o projeto, use o seguinte comando:
-
-var pessoa = "henry";
-var PESSOA = "hesdras";
-
-console.log(pessoa)
+ ## Aqui esta um uso de codigos em javaScript para mostrar se é eleitor como exemplo:
 
 
-## você pode contribuir tambem
-para contribuir basta fazer oq está abaixo:
+Este exemplo verifica se uma pessoa é eleitora e faz uma verificação extra com base na idade.
 
-1. Faça um fork do repositório.
-2. Crie um novo branch: `git checkout -b nome-da-funcionalidade`.
-3. Faça suas alterações.
-4. Suba seu branch: `git push origin nome-da-funcionalidade`.
-5. Crie um Pull Request.
+```javascript
+var idade, eleitor, resultado;
 
+idade = 65; // Define a idade
+
+// Verifica se a pessoa é eleitora
+eleitor = (idade < 18) ? "não eleitor" : "sim, eleitor";
+
+// Verifica se a idade NÃO é igual a 60
+resultado = !(idade === 60) ? "true" : "false";
+
+// Exibe o resultado
+alert(resultado);
+console.log(resultado);
+
+
+ ### linguagens que eu usei ou tive contato ao longo do curso
+
+-HTML5
+-CSS
+-JavaScript
+
+
+### Como usar ou fazer codigos em javaScript
+
+vou exemplificar no VScode pois foi ele que eu usei
+
+cria uma pasta separada no vscode e nelas coloca um nome ".js" ex: "javascrpt.js" e caso queira testar no seu navegador cria outra pasta com ".html" "navegador.hmtl" 
+
+no terminal pode escrever os codigos de javaScript na pasta de javascript  e html na de html
